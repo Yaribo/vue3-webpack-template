@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ count }}</h1>
+  <h1 @click="increase">
+    {{ count }}
+  </h1>
 </template>
 
 
@@ -10,8 +12,17 @@ export default {
 			count: 0,
 		};
 	},
+	methods: {
+		increase() {
+			this.count += 1
+		}
+	}
 };
 </script>
 
 <style>
+	h1 {
+		font-size: 50px;
+		color: royalblue;
+	}
 </style>

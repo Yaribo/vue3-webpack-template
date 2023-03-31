@@ -10,6 +10,7 @@ module.exports = {
     // 'plugin:vue/vue3-strongly-recommended', // Lv2
     'plugin:vue/vue3-recommended', // Lv3
     'eslint:recommended',
+    '@vue/prettier'
   ],
   // 구문 분석할 패키지 설정(Babel, ES6^ => ES5)
   parserOptions: {
@@ -36,5 +37,15 @@ module.exports = {
         multiline: 'never',
       },
     ],
+        "prettier/prettier": ['error', {
+      singleQuote: true,
+      semi: true,
+      useTabs: true,
+      tabWidth: 2,
+      trailingComma: 'all',
+      printWidth: 80,
+      bracketSpacing: true,
+      arrowParens: 'avoid'
+    }]
   },
 };
